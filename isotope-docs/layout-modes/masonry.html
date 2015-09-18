@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="export">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="filter &amp; sort magical layouts">
+
+  <title>Isotope &#xB7; masonry</title>
+
+    <!-- Isotope does not require any CSS files -->
+    <link rel="stylesheet" href="../css/isotope-docs.css" media="screen">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@metafizzyco">
+  <meta name="twitter:url" content="http://isotope.metafizzy.co/masonry.html">
+  <meta name="twitter:title" content="Isotope masonry">
+  <meta name="twitter:description" content="filter &amp; sort magical layouts">
+
+</head>
+<body class="page--masonry" data-page="masonry">
+
+  <div class="nav">
+    <h1 class="nav__title"><a href="../.">Isotope</a></h1>
+  
+    <ol class="site-nav">
+      <li class="site-nav__item site-nav__item--filtering">
+        <a class="site-nav__item__link" href="../filtering.html">Filtering</a></li>
+      <li class="site-nav__item site-nav__item--sorting">
+        <a class="site-nav__item__link" href="../sorting.html">Sorting</a></li>
+      <li class="site-nav__item site-nav__item--layout ">
+        <a class="site-nav__item__link" href="../layout.html">Layout</a>
+      </li>
+      <li class="site-nav__item site-nav__item--layout-modes sub-nav-parent">
+        <a class="site-nav__item__link" href="../layout-modes.html">Layout modes</a>
+        <ul class="sub-nav">
+            <li class="sub-nav__item sub-nav__item--masonry">
+              <a class="sub-nav__item__link" href="../layout-modes/masonry.html">masonry</a></li>
+            <li class="sub-nav__item sub-nav__item--fitrows">
+              <a class="sub-nav__item__link" href="../layout-modes/fitrows.html">fitRows</a></li>
+            <li class="sub-nav__item sub-nav__item--vertical">
+              <a class="sub-nav__item__link" href="../layout-modes/vertical.html">vertical</a></li>
+            <li class="sub-nav__item sub-nav__item--packery">
+              <a class="sub-nav__item__link" href="../layout-modes/packery.html">packery</a></li>
+            <li class="sub-nav__item sub-nav__item--cellsbyrow">
+              <a class="sub-nav__item__link" href="../layout-modes/cellsbyrow.html">cellsByRow</a></li>
+            <li class="sub-nav__item sub-nav__item--masonryhorizontal">
+              <a class="sub-nav__item__link" href="../layout-modes/masonryhorizontal.html">masonryHorizontal</a></li>
+            <li class="sub-nav__item sub-nav__item--fitcolumns">
+              <a class="sub-nav__item__link" href="../layout-modes/fitcolumns.html">fitColumns</a></li>
+            <li class="sub-nav__item sub-nav__item--cellsbycolumn">
+              <a class="sub-nav__item__link" href="../layout-modes/cellsbycolumn.html">cellsByColumn</a></li>
+            <li class="sub-nav__item sub-nav__item--horizontal">
+              <a class="sub-nav__item__link" href="../layout-modes/horizontal.html">horizontal</a></li>
+        </ul>
+      </li>
+      <li class="site-nav__item site-nav__item--options">
+        <a class="site-nav__item__link" href="../options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--methods">
+        <a class="site-nav__item__link" href="../methods.html">Methods</a></li>
+      <li class="site-nav__item site-nav__item--events">
+        <a class="site-nav__item__link" href="../events.html">Events</a></li>
+      <li class="site-nav__item site-nav__item--license">
+        <a class="site-nav__item__link" href="../license.html">License</a></li>
+      <li class="site-nav__item site-nav__item--appendix">
+        <a class="site-nav__item__link" href="../appendix.html">Appendix</a></li>
+      <li class="site-nav__item site-nav__item--faq">
+        <a class="site-nav__item__link" href="../faq.html">FAQ</a></li>
+    </ol>
+  
+    <ul class="page-nav" data-js-module="page-nav">
+<li class="page-nav__item page-nav__item--h2"><a href="#options">Options</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#columnwidth">columnWidth</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#gutter">gutter</a></li>
+<li class="page-nav__item page-nav__item--h3"><a href="#isfitwidth">isFitWidth</a></li>
+</ul>
+  </div>
+
+
+  <div id="content" class="main">
+    <div class="primary-content">
+        <h1>masonry</h1>
+
+
+<p><code>masonry</code> is the default layout mode.  It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. <code>masonry</code> uses the same code from the <a href="http://masonry.desandro.com">Masonry library</a>.</p> 
+
+<div class="big-demo go-wide">
+  <div class="grid js-isotope" data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 110 } }">
+    <div class="grid-splash-item grid-splash-item--width2">1</div>
+    <div class="grid-splash-item grid-splash-item--height2">2</div>
+    <div class="grid-splash-item">3</div>
+    <div class="grid-splash-item">4</div>
+    <div class="grid-splash-item grid-splash-item--width2 grid-splash-item--height2">5</div>
+    <div class="grid-splash-item grid-splash-item--width2">6</div>
+    <div class="grid-splash-item grid-splash-item--height2">7</div>
+    <div class="grid-splash-item">8</div>
+    <div class="grid-splash-item">9</div>
+    <div class="grid-splash-item grid-splash-item--width2">10</div>
+    <div class="grid-splash-item">11</div>
+    <div class="grid-splash-item">12</div>
+  </div>
+    <p class="edit-demo">
+        <a href="http://codepen.io/desandro/pen/mEinp">Edit this demo on CodePen</a>
+    </p>
+</div>
+
+
+<h2 id="options">Options</h2>
+
+
+<h3 id="columnwidth">columnWidth</h3>
+
+<p>Aligns items to a horizontal grid.</p>
+
+<div class="call-out call-out--chill">
+  <p>We recommend setting <code>columnWidth</code>. If <code>columnWidth</code> is not set, Isotope will use the outer width of the first item.</p>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="js">masonry: {
+  columnWidth: <span class="number">50</span>
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="grid js-isotope" data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 50 } }">
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/mEinp">Edit this demo on CodePen</a>
+      </p>
+  </div>
+</div>
+
+<p>Use <a href="../options.html#element-sizing">element sizing</a> for responsive layouts with percentage widths. Set <code>columnWidth</code> to an <i>Element</i> or Selector <i>String</i> to use the outer width of the element.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid&quot;</span>&gt;</span>
+  <span class="comment">&lt;!-- .grid-sizer empty element, only used for element sizing --&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-sizer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-item grid-item--width2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+
+<pre><code class="css"><span class="comment">/* fluid 5 columns */</span>
+<span class="class">.grid-sizer</span>,
+<span class="class">.grid-item</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20%</span></span></span>; }</span>
+<span class="comment">/* 2 columns wide */</span>
+<span class="class">.grid-item--width2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40%</span></span></span>; }</span>
+</code></pre>
+
+<pre><code class="js">$(<span class="string">&apos;.grid&apos;</span>).isotope({
+  itemSelector: <span class="string">&apos;.grid-item&apos;</span>,
+  percentPosition: <span class="literal">true</span>,
+  masonry: {
+    <span class="comment">// use outer width of grid-sizer for columnWidth</span>
+    columnWidth: <span class="string">&apos;.grid-sizer&apos;</span>
+  }
+})
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="grid grid--fluid-5-col js-isotope" data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: &quot;.grid-sizer&quot; }, &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;percentPosition&quot;: true }">
+      <div class="grid-sizer"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+    </div>
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/mIkhq">Edit this demo on CodePen</a>
+      </p>
+  </div>
+</div>
+
+
+<h3 id="gutter">gutter</h3>
+
+<p>The horizontal space between item elements.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="js">masonry: {
+  columnWidth: <span class="number">50</span>,
+  gutter: <span class="number">10</span>
+}
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="grid grid-has-gutter js-isotope" data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 50, &quot;gutter&quot;: 10 } }">
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+    </div>
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/dHsCJ">Edit this demo on CodePen</a>
+      </p>
+  </div>
+</div>
+
+<p>To set vertical space between elements, use <code>margin</code> CSS.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="js">masonry: {
+  columnWidth: <span class="number">50</span>,
+  gutter: <span class="number">10</span>
+}
+</code></pre>
+
+<pre><code class="css"><span class="class">.grid-item</span> <span class="rules">{
+  <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">10px</span></span></span>;
+}</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="grid grid-has-gutter grid--masonry-gutter-bottom js-isotope " data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 50, &quot;gutter&quot;: 10 } }">
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+    </div>
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/sqrwo">Edit this demo on CodePen</a>
+      </p>
+  </div>
+</div>
+
+<p>If set to an <i>Element</i> or Selector <i>String</i>, Masonry will use the width of that element. See <a href="../options.html#element-sizing">Element sizing</a>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-sizer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;gutter-sizer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;grid-item grid-item--width2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+
+<pre><code class="css"><span class="class">.grid-sizer</span>,
+<span class="class">.grid-item</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">22%</span></span></span>; }</span>
+
+<span class="class">.gutter-sizer</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">4%</span></span></span>; }</span>
+
+<span class="class">.grid-item--width2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">48%</span></span></span>; }</span>
+</code></pre>
+
+<pre><code class="js">masonry: {
+  columnWidth: <span class="string">&apos;.grid-sizer&apos;</span>,
+  gutter: <span class="string">&apos;.gutter-sizer&apos;</span>
+},
+itemSelector: <span class="string">&apos;.grid-item&apos;</span>,
+percentPosition: <span class="literal">true</span>
+</code></pre>
+
+  </div>
+  <div class="duo__cell example__demo">
+
+    <div class="grid grid--fluid-gutter js-isotope" data-isotope-options="{ &quot;itemSelector&quot;: &quot;.grid-item&quot;, &quot;percentPosition&quot;: true, &quot;masonry&quot;: { &quot;columnWidth&quot;: &quot;.grid-sizer&quot;, &quot;gutter&quot;: &quot;.gutter-sizer&quot; } }">
+      <div class="grid-sizer"></div>
+      <div class="gutter-sizer"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/aEmkl">Edit this demo on CodePen</a>
+      </p>
+  </div>
+
+</div>
+
+
+<h3 id="isfitwidth">isFitWidth</h3>
+
+<p>Sets the width of the container to fit the available number of columns, based the size of container&apos;s parent element. When enabled, you can center the container with CSS.</p>
+
+<div class="call-out">
+  <p>isFitWidth does not work with <a href="../options.html#element-sizing">element sizing</a> <em>and</em> percentage width. Either <code>columnWidth</code> needs to be set to a fixed size, like <code>columnWidth: 120</code>, or items need to have a fixed size in pixels, like <code>width: 120px</code>. Otherwise, the container and item widths will collapse on one another.</p>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+<pre><code class="js">masonry: {
+  columnWidth: <span class="number">100</span>,
+  isFitWidth: <span class="literal">true</span>
+}
+</code></pre>
+
+<pre><code class="css"><span class="comment">/* center container with CSS */</span>
+<span class="class">.grid</span> <span class="rules">{
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
+}</span>
+</code></pre>
+  </div>
+  <div class="duo__cell example__demo" style="border: 2px solid #484542; padding-top: 10px;">
+    <div class="grid grid--fit-width js-isotope" data-isotope-options="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 100, &quot;isFitWidth&quot;: true } }">
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item grid-item--width2"></div>
+    </div>
+
+      <p class="edit-demo">
+          <a href="http://codepen.io/desandro/pen/BptxJ">Edit this demo on CodePen</a>
+      </p>
+  </div>
+
+</div>
+
+    </div>
+  </div>
+
+  <div class="site-footer">
+  
+    <div class="primary-content">
+  
+      <p class="footer-copy">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Isotope updates</a></p>
+    </div>
+  
+    <div class="site-footer__brand">
+      <a class="site-footer__brand__logo" href="http://metafizzy.co">M<span class="etafizzy">etafizzy</span></a>
+      <span class="site-footer__brand__copyright">&#xA9; 2011&#x2013;2015</span>
+    </div>
+  
+  </div>
+
+<!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="..//jquery.min.js"><\/script>')</script>
+
+  <script src="../js/isotope-docs.min.js"></script>
+
+
+</body>
+</html>
