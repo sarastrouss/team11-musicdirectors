@@ -1,0 +1,135 @@
+/* Custom CSS to style page, heatmap, and line chart. */ 
+rect.bordered {
+  stroke: #E6E6E6;
+  stroke-width:2px; 
+}
+description.example {
+  fill:#000;
+}
+
+text.mono {
+  font-size: 9pt;
+  font-family: "Open Sansde", sans-serif;
+  fill: #000000;
+}
+
+text.axis-workweek {
+  fill: #000000;
+}
+
+text.axis-worktime {
+  fill: #000000;
+}
+
+.d3-tip {
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 0px;
+  font-weight: 600;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+body {
+  background-color: #F0F0F0;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+#heatmap {
+  display: block;
+  float: left;
+	width: 700px;
+  margin-bottom: -40px;
+}
+
+#listener_chart {
+  display: block;
+	float:left;
+	width: 700px;
+}
+
+#logo {
+  max-width:70px; /* you can use % */
+  height: auto;
+
+}
+#title {
+  display: inline;
+  margin-left: 5px;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+#week_selection {
+  float:right;
+  margin-top: 16px;
+  vertical-align: middle;
+  display: block;
+}
+
+.header {
+  background-color: #FFF;
+  padding: 10px;
+}
+.wrapper {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #FFF;
+  display: inline;
+  float: right;
+  width: 300px;
+  padding: 20px;
+  margin:20px;
+}
+#sidebar_image img {
+  display:block;
+  margin: 0 auto;
+  max-width: 230px;
+}
+#sidebar_title {
+  padding-top:10px;
+  padding-bottom:10px;
+  font-weight: 600;
+}
+.chart_label {
+  background-color: #FFF;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+#hourly_label {
+  background-color: #FFF;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: -10px;
+}
+
+#buttons {
+  display: inline;
+  float: right;
+  margin-top: 16px;
+  vertical-align: middle;
+
+}
+#header_wrapper {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+#container {
+  width: 1070px;
+  margin: 0 auto;
+}

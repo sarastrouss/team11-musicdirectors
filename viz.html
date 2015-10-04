@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <!-- Index page with library imports and divs for each visualization/area --> 
+  <head>
+    <script src="d3/d3.js"></script>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="js/d3.tip.v0.6.3.js" type="text/javascript" ></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.1.0.min.js"></script>
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style sheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <title>WREK Dashboard</title>
+  </head>
+  <body>
+  
+    <div class="header">
+      <div id="header_wrapper">
+        <img id="logo" src="img/logo.png">
+        <h1 id="title">Programming Dashboard</h1>
+
+        <div id="buttons">
+          <input class="button btn btn-default" type="button" value="All" onclick="displayHeatmap('Pageviews, Callers, & Online Listeners')"/>
+          <input class="button btn btn-default" type="button" value="Listeners" onclick="displayHeatmap('Listeners')"/>
+          <input class="button btn btn-default" type="button" value="Pageviews" onclick="displayHeatmap('Pageviews')"/>
+          <input class="button btn btn-default" type="button" value="# Callers" onclick="displayHeatmap('# Callers')"/>
+        </div>
+        <!-- placeholder for dynamic loading functionality
+        <div id="week_selection">
+          <select name="week_select" class="form-control">
+            <option>2014-11-10 to 2014-11-16</option>
+            <option>2014-11-17 to 2014-11-23</option>
+          </select>
+        </div>
+      -->
+      </div>
+    </div>
+
+    <!-- dynamically loaded sidebar (populated using jQuery) --> 
+    <div id="container">
+      <div class="sidebar">
+        <div id="sidebar_image"></div>
+        <div id="sidebar_title"></div>
+        <div id="sidebar_description"></div>
+        <div id="sidebar_listen_link"></div>
+      </div> 
+      <!-- spacer divs for visualizations -->
+      <div class="wrapper">
+        <div id="heatmap">
+          <div id="heatmap_label" class="chart_label">Heatmap: Pageviews, Callers, & Online Listeners</div>
+        </div>
+        <div id="hourly_label">Hourly Listeners</div>
+
+        <div id="listener_chart">
+        </div>
+        <script src="js/viz.js" type="text/javascript"></script>
+      </div>
+    </div>
+
+  </body>
+</html>
